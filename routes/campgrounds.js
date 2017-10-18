@@ -86,19 +86,19 @@ router.put("/:id",middleware.checkCampgroundOwnership, function(req, res){
 });
 
 
-router.put("/:id", function(req, res){
-  geocoder.geocode(req.body.location, function (err, data) {
-    Campground.findByIdAndUpdate(req.params.id, req.body.campground, function(err, updatedCampground){
-        if(err){
-            req.flash("error", err.message);
-            res.redirect("back");
-        } else {
-            req.flash("success","Successfully Updated!");
-            res.redirect("/campgrounds/" + req.params.id);
-        }
-    });
-  });
-});
+// router.put("/:id", function(req, res){
+//   geocoder.geocode(req.body.location, function (err, data) {
+//     Campground.findByIdAndUpdate(req.params.id, req.body.campground, function(err, updatedCampground){
+//         if(err){
+//             req.flash("error", err.message);
+//             res.redirect("back");
+//         } else {
+//             req.flash("success","Successfully Updated!");
+//             res.redirect("/campgrounds/" + req.params.id);
+//         }
+//     });
+//   });
+// });
 
 
 // DESTROY CAMPGROUND ROUTE
