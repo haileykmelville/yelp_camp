@@ -10,6 +10,11 @@ body {
   color: white;
 }
 
+#opener {
+  font-family: lato;
+  font-size: 50px;
+}
+
 .slideshow { 
   position: fixed;
   width: 100%;
